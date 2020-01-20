@@ -1,0 +1,39 @@
+
+package mybankapp;
+
+
+import java.util.Scanner;
+
+public class MyBankApp {
+
+
+    public static void main(String[] args) {
+        int accId=1,aId,choice;
+        boolean flag = true;
+        double amt;
+        BankApp[] bnk = new BankApp[50];
+        while(flag){
+            System.out.println("Enter 1.Open 2.Dep 3.WDraw 4.BalInq 5.Exit");
+            Scanner sc = new Scanner(System.in);
+            choice = sc.nextInt();
+            
+            switch(choice){
+                case 1:
+                    bnk[accId] = new BankApp();
+                    accId=bnk[accId].openAccnt();
+                    break;
+                case 2:
+                    System.out.println("Enter the acc id:");
+                    aId= sc.nextInt();
+                    if(aId >= accId  || aId<=0){
+                        System.out.println("Invalid id");
+                    }else
+                    {
+                        System.out.println("Enter the dep amt:");
+                        amt=sc.nextDouble();
+                        bnk[aId].depAmt(amt);
+                    } 
+            }
+        }
+    }
+}

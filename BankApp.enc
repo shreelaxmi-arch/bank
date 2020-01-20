@@ -1,0 +1,23 @@
+
+package mybankapp;
+
+
+public class BankApp {
+    int accId;
+    
+    void openAccnt(){
+        
+    }
+    
+    void depAmt(int amt){
+        
+    }
+    
+    void wDrawAmt(int amt){
+        
+    }
+    
+    void balInquiry(int acccId){
+        
+    }
+}
